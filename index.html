@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Point | Agencia de Redes Sociales y Diseño Gráfico</title>
+    <meta name="description" content="Impulsamos tu marca en el mundo digital. Especialistas en Redes Sociales, Branding, Diseño Gráfico y Desarrollo Web en México.">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (via CDN for quick setup, will use custom config in style.css) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            midnight: '#F8FAFC', // Light background
+                            yellow: '#FACC15',   // Vibrant yellow from logo
+                            dark: '#1F2937',     // Dark grey from logo
+                            slate: '#F1F5F9',    // Light surface
+                            text: '#111827',     // Deep text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-midnight text-brand-text selection:bg-brand-yellow/30 selection:text-brand-dark">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-midnight/90 backdrop-blur-md border-b border-brand-text/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Digital Point Logo" class="h-8 md:h-12 w-auto">
+                <span class="sr-only">Digital Point</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
+                <a href="#inicio" class="text-brand-text/70 hover:text-brand-yellow transition-colors">Inicio</a>
+                <a href="#servicios" class="text-brand-text/70 hover:text-brand-yellow transition-colors">Servicios</a>
+                <a href="#nosotros" class="text-brand-text/70 hover:text-brand-yellow transition-colors">Nosotros</a>
+                <a href="#contacto" class="px-5 py-2 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-dark hover:text-white transition-all duration-300">Cotizar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-[80vh] flex items-center pt-32 pb-20 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-brand-yellow/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+            <div class="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-brand-dark/5 rounded-full blur-[150px]"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-yellow/10 border border-brand-yellow/20 text-brand-dark text-xs font-bold tracking-widest uppercase">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-yellow opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-yellow"></span>
+                    </span>
+                    <span>Expertos en Crecimiento Digital</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight text-brand-text">
+                    Estamos listos para <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-dark">impulsar tu marca</span> y hacer que destaque
+                </h1>
+                <p class="text-lg text-slate-600 max-w-xl leading-relaxed">
+                    Gestionamos y hacemos crecer tus redes sociales con estrategias diseñadas para atraer clientes
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://wa.me/3326213125" class="inline-flex items-center justify-center px-8 py-4 bg-brand-yellow text-brand-dark font-bold rounded-xl hover:shadow-[0_10px_20px_rgba(250,204,21,0.3)] transition-all transform hover:-translate-y-1">
+                        Cotizar mi proyecto
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                    <a href="#servicios" class="inline-flex items-center justify-center px-8 py-4 bg-white border border-slate-200 text-brand-text font-bold rounded-xl hover:bg-slate-50 hover:border-brand-yellow/30 transition-all">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+            <div class="relative hidden lg:flex h-full items-center justify-end w-full">
+                <!-- Dots con animación secuencial de flotación más marcada -->
+                <div class="flex items-center space-x-6 pr-10">
+                    <div class="w-16 h-16 rounded-full bg-[#3F3F46]" style="animation: float 2s ease-in-out infinite 0s;"></div>
+                    <div class="w-16 h-16 rounded-full bg-[#3F3F46]" style="animation: float 2s ease-in-out infinite 0.3s;"></div>
+                    <div class="w-16 h-16 rounded-full bg-[#D4AF37]" style="animation: float 2s ease-in-out infinite 0.6s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl font-display font-bold text-brand-text">Nuestros Servicios</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Creamos estrategias integrales para elevar tu marca a un nuevo nivel digital.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1: Marketing Digital -->
+                <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-brand-yellow/50 hover:bg-white transition-all duration-500 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 mb-6 rounded-2xl bg-brand-yellow/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-yellow icon-marketing" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3v18h18" />
+                            <rect class="bar-1" x="6" y="14" width="3" height="4" rx="1" fill="currentColor" opacity="0.4" />
+                            <rect class="bar-2" x="11" y="10" width="3" height="8" rx="1" fill="currentColor" opacity="0.7" />
+                            <rect class="bar-3" x="16" y="6" width="3" height="12" rx="1" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display text-brand-text">Marketing Digital</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Gestión estratégica de redes sociales para conectar con tu audiencia ideal.</p>
+                </div>
+                <!-- Service 2: Branding -->
+                <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-brand-dark/20 hover:bg-white transition-all duration-500 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 mb-6 rounded-2xl bg-brand-dark/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-dark icon-branding" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path class="path-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                            <path class="path-draw" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display text-brand-text">Branding</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Construimos identidades visuales que cuentan historias y generan lealtad.</p>
+                </div>
+                <!-- Service 3: Diseño Gráfico -->
+                <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-brand-yellow/50 hover:bg-white transition-all duration-500 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 mb-6 rounded-2xl bg-brand-yellow/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-yellow icon-design" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect class="shape-rotate" x="4" y="4" width="16" height="16" rx="2" stroke-width="1.5" />
+                            <circle class="shape-float" cx="12" cy="12" r="3" fill="currentColor" opacity="0.5" />
+                            <path stroke-linecap="round" stroke-width="1.5" d="M12 8v8M8 12h8" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display text-brand-text">Diseño Gráfico</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Creatividad visual de alto impacto para destacar en un feed saturado.</p>
+                </div>
+                <!-- Service 4: Desarrollo Web -->
+                <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-brand-dark/20 hover:bg-white transition-all duration-500 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 mb-6 rounded-2xl bg-brand-dark/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-dark icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path class="tag-move" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                            <path class="cursor-blink" stroke-linecap="round" stroke-width="2" d="M12 8v8" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display text-brand-text">Desarrollo Web</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Sitios modernos, rápidos y convertidores diseñados para tu negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-16 bg-brand-yellow relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-dark rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            <h3 class="text-3xl md:text-4xl font-display font-bold text-brand-dark max-w-3xl leading-tight">
+                No hay proyectos pequeños, solo grandes marcas esperando ser descubiertas.
+            </h3>
+            <a href="https://wa.me/3326213125" target="_blank" class="flex-shrink-0 inline-flex items-center justify-center px-10 py-4 bg-brand-dark text-white font-bold rounded-xl hover:bg-brand-text shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+                <svg class="mr-2 w-6 h-6 text-brand-yellow" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.261 0-4.108 1.847-4.108 4.108 0 .428.067.842.195 1.233l.056.173-1.01 3.69 3.778-1.026.166.052c.406.126.83.193 1.272.193 2.261 0 4.108-1.848 4.108-4.108.001-2.261-1.847-4.115-4.557-4.316zm5.82 10.395c-1.428 1.428-3.328 2.214-5.352 2.214-.492 0-.974-.047-1.442-.14l-.403-.081L6 19.86l1.31-4.787-.087-.144a6.764 6.764 0 01-1.042-3.626c0-2.316 1.054-4.485 2.969-6.101 1.916-1.616 4.453-2.505 7.143-2.505 2.316 0 4.485 1.054 6.101 2.969s2.505 4.453 2.505 7.143c0 2.067-.803 4.01-2.258 5.465l-.01.01z"/></svg>
+                ¡Contáctanos!
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="nosotros" class="py-24 relative bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-64 h-64 bg-brand-yellow/20 rounded-full blur-[100px]"></div>
+                <div class="p-12 rounded-3xl bg-brand-dark relative z-10 shadow-xl">
+                    <h2 class="text-3xl font-display font-bold mb-8 text-white">Construimos soluciones a la medida</h2>
+                    <div class="space-y-5">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-6 h-6 rounded-full bg-brand-yellow flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-4 h-4 text-brand-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                            </div>
+                            <p class="text-white font-medium">Estrategia personalizada</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-6 h-6 rounded-full bg-brand-yellow flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-4 h-4 text-brand-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                            </div>
+                            <p class="text-white font-medium">Contenido profesional</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-6 h-6 rounded-full bg-brand-yellow flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-4 h-4 text-brand-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                            </div>
+                            <p class="text-white font-medium">Enfoque en resultados</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-6 h-6 rounded-full bg-brand-yellow flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-4 h-4 text-brand-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                            </div>
+                            <p class="text-white font-medium">Optimización constante</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h2 class="text-4xl font-display font-bold text-brand-text">¿Porqué elegirnos?</h2>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                    Detrás de cada negocio hay objetivos claros: <strong>crecer, atraer clientes y fortalecer su marca.</strong>
+                </p>
+                <p class="text-lg text-slate-500 leading-relaxed">
+                    Nuestro trabajo es convertir esos objetivos en una estrategia digital que genere resultados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-20 border-y border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-slate-400 uppercase tracking-widest text-sm font-semibold mb-12">Confían en nosotros</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+                <!-- Logos Placeholder -->
+                <div class="h-8 w-32 bg-slate-200 rounded animate-pulse"></div>
+                <div class="h-8 w-24 bg-slate-200 rounded animate-pulse"></div>
+                <div class="h-10 w-36 bg-slate-200 rounded animate-pulse"></div>
+                <div class="h-8 w-28 bg-slate-200 rounded animate-pulse"></div>
+                <div class="h-9 w-32 bg-slate-200 rounded animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-brand-midnight">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+            <div class="space-y-8">
+                <h2 class="text-5xl font-display font-bold leading-tight text-brand-text">¿Tienes un proyecto en mente? <span class="text-brand-yellow">Hagámoslo realidad.</span></h2>
+                <div class="space-y-6">
+                    <a href="https://wa.me/3326213125" class="flex items-center space-x-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
+                            <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.261 0-4.108 1.847-4.108 4.108 0 .428.067.842.195 1.233l.056.173-1.01 3.69 3.778-1.026.166.052c.406.126.83.193 1.272.193 2.261 0 4.108-1.848 4.108-4.108.001-2.261-1.847-4.115-4.557-4.316zm5.82 10.395c-1.428 1.428-3.328 2.214-5.352 2.214-.492 0-.974-.047-1.442-.14l-.403-.081L6 19.86l1.31-4.787-.087-.144a6.764 6.764 0 01-1.042-3.626c0-2.316 1.054-4.485 2.969-6.101 1.916-1.616 4.453-2.505 7.143-2.505 2.316 0 4.485 1.054 6.101 2.969s2.505 4.453 2.505 7.143c0 2.067-.803 4.01-2.258 5.465l-.01.01z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">WhatsApp</p>
+                            <p class="text-lg font-bold text-brand-text">33 2621 3125</p>
+                        </div>
+                    </a>
+                    <a href="mailto:digitalpointmx1@gmail.com" class="flex items-center space-x-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-yellow/10 flex items-center justify-center group-hover:bg-brand-yellow/20 transition-colors">
+                            <svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Correo</p>
+                            <p class="text-lg font-bold text-brand-text">digitalpointmx1@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="p-10 rounded-3xl bg-white border border-slate-100 shadow-xl">
+                <form id="contactForm" action="enviar.php" method="POST" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-600 mb-2">Nombre completo</label>
+                        <input type="text" name="Nombre" required placeholder="Tu nombre" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-brand-yellow outline-none transition-colors text-brand-text">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-600 mb-2">Correo o WhatsApp</label>
+                        <input type="text" name="Contacto" required placeholder="hola@ejemplo.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-brand-yellow outline-none transition-colors text-brand-text">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-600 mb-2">Háblanos de tu proyecto</label>
+                        <textarea rows="4" name="Mensaje" required placeholder="¿En qué podemos ayudarte?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-brand-yellow outline-none transition-colors text-brand-text"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-brand-yellow text-brand-dark font-bold rounded-xl hover:shadow-[0_10px_20px_rgba(250,204,21,0.3)] transition-all">Enviar Mensaje</button>
+                    <p id="formStatus" class="text-center text-sm font-medium hidden"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Digital Point Logo" class="h-10 w-auto">
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/digitalpointmx" target="_blank" class="text-slate-400 hover:text-brand-yellow transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.248h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/digitalpointmx" target="_blank" class="text-slate-400 hover:text-brand-yellow transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/digitalpointmx" target="_blank" class="text-slate-400 hover:text-brand-yellow transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+                <p>&copy; 2024 Digital Point. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <button onclick="openLegalModal('privacy')" class="hover:text-brand-text transition-colors text-left">Aviso de Privacidad</button>
+                    <button onclick="openLegalModal('terms')" class="hover:text-brand-text transition-colors text-left">Términos y Condiciones</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js?v=3"></script>
+
+    <!-- Legal Modal -->
+    <div id="legalModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="legalModalBackdrop" class="absolute inset-0 bg-brand-dark/80 backdrop-blur-sm" onclick="closeLegalModal()"></div>
+        <div id="legalModalPanel" class="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[85vh] flex flex-col transform scale-95 transition-transform duration-300">
+            <div class="flex justify-between items-center p-6 border-b border-slate-100">
+                <h2 id="legalModalTitle" class="text-2xl font-display font-bold text-brand-text">Aviso Legal</h2>
+                <button onclick="closeLegalModal()" class="text-slate-400 hover:text-brand-yellow transition-colors p-2 rounded-full hover:bg-slate-50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div id="legalModalContent" class="p-6 sm:p-8 overflow-y-auto text-slate-600 space-y-4 text-sm leading-relaxed">
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <template id="tplPrivacy">
+        <h3 class="text-xl font-bold text-brand-dark mb-4">AVISO DE PRIVACIDAD</h3>
+        <p>Este instrumento describe, de conformidad con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, los datos que la Persona Moral “DIGITAL POINT SOCIEDAD ANONIMA DE CAPITAL VARIABLE”, en adelante “Digital Point”, recopila del usuario al momento de utilizar su página web o establecer relaciones empresariales y comerciales con la misma por cualquier otro medio, de la misma forma se incluyen, conforme a la ley, la manera en que dichos datos son recopilados y el uso que se les da.</p>
+        <p>También se da a conocer, mediante este aviso, la forma en que el usuario puede limitar el uso de dichos datos y el procedimiento para ejercer los derechos ARCO.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">I. Responsable de la protección de los datos personales</h4>
+        <p>Con fundamento en los artículos 15, 16 y sucesivos de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su reglamento, se hace de su conocimiento que Digital Point con domicilio ubicado en la calle Av. De los Maestros, número 1604, colonia Mezquitan Country, municipio de Guadalajara, Jalisco, C.P. 44260, es responsable de recabar, usar y proteger los datos personales de nuestros Clientes, en cumplimiento de los principios de licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad, todos ellos dispuestos como principios rectores del manejo de datos personales de acuerdo con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, destinados a generar la confianza en cada uno de nuestros clientes para proporcionar sus datos personales.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">II. Identidad y domicilio del encargado del tratamiento de los datos</h4>
+        <p>La oficina de Tratamiento de datos personales en el área designada por Digital Point, encargada de la seguridad y el manejo responsable de sus datos personales, así como atender las solicitudes que el cliente pueda presentar para ejercer los derechos aquí descritos de acuerdo con el alcance y los procedimientos ordenados por la legislación aplicable y vigente en los Estados Unidos Mexicanos.</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Contacto:</strong> Digital Point</li>
+            <li><strong>Correo electrónico:</strong> contacto@digitalpoint.mx</li>
+            <li><strong>Teléfono:</strong> 3326213125</li>
+            <li><strong>Domicilio:</strong> Av. De los Maestros, número 1604, colonia Mezquitan Country, municipio de Guadalajara, Jalisco, C.P. 44260</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">III. Finalidades primarias del tratamiento de los datos</h4>
+        <p>De acuerdo con los art. 40, 41 y 42 del reglamento de la LFPDPPP, sus datos personales serán utilizados para las siguientes finalidades necesarias para establecer la relación comercial con Digital Point:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Registro de clientes en nuestro sistema.</li>
+            <li>Para establecer las formas de pago de nuestros productos y servicios.</li>
+            <li>Para elaborar documentos CFDI vía correo electrónico.</li>
+            <li>Para implementar distintos contratos legales aplicables a las relaciones comerciales con Digital Point.</li>
+            <li>Para la aplicación y ejercicio de acciones legales en el incumplimiento de las relaciones comerciales.</li>
+            <li>Para evaluar y celebrar convenios de reconocimiento de adeudos, reestructura y financiamiento.</li>
+            <li>Para llevar a cabo la gestión y procesos de cobranza.</li>
+            <li>Envió y recepción de pagos.</li>
+            <li>Para el reconocimiento de firmas en distintas operaciones comerciales con Digital Point.</li>
+            <li>Para solicitar referencias bancarias.</li>
+            <li>Notificarle sobre nuevos productos y servicios.</li>
+            <li>Para llevar a cabo las comunicaciones necesarias respecto de los servicios que contrate.</li>
+            <li>Para atender sus quejas o sugerencias.</li>
+            <li>Para atender a sus dudas y comentarios.</li>
+            <li>Elaborar estadísticas de habito de consumo de servicios.</li>
+            <li>Evaluación de servicios prestados.</li>
+            <li>Medir el trafico en la Pagina Web y realizar funciones de análisis sobre la misma.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IV. Finalidades secundarias del tratamiento de los Datos</h4>
+        <p>De manera adicional, utilizaremos su información personal para las siguientes finalidades secundarias, que no son necesarias para una relación comercial pero que nos ayudan a mantener cercanía con los clientes, así como promover nuestros productos y servicios:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Para ofrecer ofertas y/o promociones.</li>
+            <li>Para brindar apoyo publicitario.</li>
+            <li>Entrega de obsequios e incentivos.</li>
+            <li>Establecer alianzas comerciales.</li>
+            <li>Brindar asesoría en proyectos de construcción.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">V. Forma de recabar los Datos personales</h4>
+        <p>La manera en la que Digital Point recaba los Datos Personales son:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>De manera personal, al llenar los formatos diseñados para tal efecto.</li>
+            <li>A través de la página web: www.digitalpoint.mx</li>
+            <li>A través de correo electrónico: contacto@digitalpoint.mx</li>
+            <li>De manera telefónica: 3326213125</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VI. Datos personales recabados</h4>
+        <p>Para las finalidades anteriormente señaladas, podemos recabar todos o en parte, los siguientes datos personales:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Nombre o razón social.</li>
+            <li>Datos fiscales.</li>
+            <li>Domicilio comercial y particular.</li>
+            <li>Teléfono comercial y particular.</li>
+            <li>Identificación oficial.</li>
+            <li>Firma.</li>
+            <li>Correo electrónico.</li>
+            <li>Nombre del representante legal.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VII. Datos financieros, fiscales o patrimoniales</h4>
+        <p>Para proporcionar el servicio, se recaban los siguientes datos financieros:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Cuenta bancaria.</li>
+            <li>CLABE Interbancaria.</li>
+            <li>Información bancaria.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VIII. Datos sensibles</h4>
+        <p>Le informamos que Digital Point no recaba datos sensibles de sus clientes o proveedores.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IX. Cookies y/o web beacons</h4>
+        <p>Le informamos que en nuestros sitios de internet podemos hacer uso de cookies, web beacons y otras tecnologías de rastreo que nos permiten cumplir con las finalidades informadas en el presente Aviso de Privacidad.</p>
+        <p>Se entiende por cookies y web beacons, los archivos de datos que se almacena en el disco duro del equipo de cómputo o del dispositivo de comunicaciones electrónicas de un usuario al navegar en un sitio de internet específico, el cual permite intercambiar información de estado entre dicho sitio y el navegador del usuario. La información de estado puede revelar medios de identificación de sesión, autenticación o preferencias del usuario, así como cualquier dato almacenado por el navegador respecto al sitio de internet.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">X. Consentimiento</h4>
+        <p>De acuerdo con lo indicado en el artículo 8 de la Ley, se entenderá que el titular consiente tácitamente el tratamiento de sus datos, cuando habiéndose puesto a su disposición el presente Aviso de Privacidad, no manifiesta su oposición al respecto.</p>
+        <p>Así mismo, declara y acepta que cuenta con el consentimiento de aquellos terceros de los cuales usted proporciona sus datos, en el entendido de que dichos datos se regirán por el presente Aviso de Privacidad.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XI. Transferencia</h4>
+        <p>Únicamente transferiremos sus datos personales a terceros, nacionales o extranjeros, que estén relacionados jurídica o comercialmente con nosotros para cumplir con las finalidades descritas en el Aviso de Privacidad y tomando en cuenta las excepciones previstas en el artículo 37 de la Ley, así como a realizar esta transferencia en los términos fijados en su reglamento.</p>
+        <p>Podremos transferir sus datos personales conforme a lo siguiente:</p>
+        <p><strong>Destinatario de los datos personales:</strong> Servicio de Administración Tributaria, Socios comerciales/filiales, Notarias Publicas, Abogados externos/despachos de cobranza.</p>
+        <p><strong>Finalidades de la transferencia:</strong> Para cumplir con la legislación fiscal aplicable, complementar o ampliar la atención, los servicios y los fines comerciales, para las investigaciones en Buró de Crédito, para la protocolización de los distintos instrumentos notariales derivados de las relaciones comerciales, y para las gestiones legales y de cobranza necesarias.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XII. Resguardo en el manejo de los datos personales</h4>
+        <p>La confidencialidad de los Datos Personales está garantizada y los mismos están protegidos por medidas de seguridad administrativas, técnicas y físicas, para evitar daño... (La copia detallada y completa resguarda la información adecuadamente en la BD).</p>
+        <!-- I will truncate here for brevity but keep it full in final prompt or just paste the key parts to look professional. Since user asked to upload it, we'll put the full text. Wait, my python script string is getting huge. -->
+        <p>La confidencialidad de los Datos Personales está garantizada y los mismos están protegidos por medidas de seguridad administrativas, técnicas y físicas, para evitar daño, pérdida, alteración, destrucción, uso, acceso o divulgación indebida; por ejemplo, los Datos Personales se encuentran en una base de datos interna, cuya administración es a través de claves de acceso que cambian en forma periódica y permitido el ingreso sólo a personas autorizadas; además, contamos con convenios de confidencialidad con el personal que maneja sus datos personales; entre otras medidas.</p>
+        <p>La obligación de confidencialidad de las personas que participan en el tratamiento de sus datos personales subsiste aun después de terminada la relación con Digital Point, sin embargo, este, no se hará responsable por el mal uso de los datos personales que pudieran realizar excolaboradores, aprovechándose de su función o puesto, a manera de beneficio personal o con la finalidad de dañar a Digital Point.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XIII. Limitación o revocación en el uso y divulgación de sus datos</h4>
+        <p>En el caso de que por cualquier situación usted requiera limitar el alcance, en todo o en parte, del uso y/o divulgación de sus datos personales, así como revocar el consentimiento para el tratamiento de estos, ponemos a su disposición la SOLICITUD PARA LIMITAR EL USO O DIVULGACIÓN, que podrá solicitar en la oficina respectiva de manera presencial o por medio de correo electrónico.</p>
+        <p>Esta solicitud seguirá el mismo procedimiento empleado para la solicitud de derechos ARCO, el cual se detalla en el siguiente apartado.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XIV. Procedimiento para ejercer derechos ARCO</h4>
+        <p>Conforme a la Ley el titular, por sí o mediante representante legal debidamente acreditado, podrá ejercer sus derechos de acceso, rectificación, cancelación y oposición directamente en Digital Point.</p>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+            <li><strong>I) Acceso.</strong> Usted podrá solicitar en todo momento conocer qué datos suyos han sido recabados y conserva el responsable.</li>
+            <li><strong>II) Rectificación.</strong> En caso de que alguno de sus datos sea inexacto o incompleto podrá solicitar su corrección, debiendo adjuntar la documentación que acredite dicha modificación.</li>
+            <li><strong>III) Cancelación.</strong> Podrá solicitarse en todo momento la cancelación de los datos; en caso de ser procedente la solicitud, los datos entrarán al período de bloqueo en el cual no podrán ser tratados de ninguna manera para su posterior supresión.</li>
+            <li><strong>IV) Oposición.</strong> En todo momento el titular podrá negarse por causa justificada al tratamiento de sus datos personales.</li>
+        </ul>
+        <p><strong>Procedimiento:</strong> Pida la Solicitud de Derechos Arco, en ATENCIÓN DE DATOS PERSONALES o vía correo electrónico (indicado en el apartado de contacto) para su posterior llenado, identificando con precisión los datos respecto de los cuales solicite el acceso, rectificación, cancelación u oposición, anexando alguno de los documentos de identificación que se señalan en la solicitud con el fin de acreditar su identidad o la personalidad con la que realiza la solicitud.</p>
+        <p>Una vez lleno este formulario deberá entregarse nuevamente al departamento encargado para tal efecto, agregando una copia de la solicitud completada donde se plasmará la fecha de recepción correspondiente, misma que servirá como acuse de recibo; podrán adjuntarse aquellos documentos que sean relevantes para la solicitud en cuestión.</p>
+        <p>Su solicitud será contestada de manera presencial o vía correo electrónico en un término de veinte días hábiles contados a partir de la fecha de recepción señalada en el acuse de recibo. Este plazo podrá ampliarse por veinte días adicionales cuando existan causas que lo justifiquen, esta situación se notificará al titular de acuerdo con lo establecido por el artículo 97 del Reglamento de la Ley.</p>
+        <p>En caso de que su solicitud sea procedente de conformidad con la Ley y demás normatividad vigente, se otorgará el acceso, se rectificarán o cancelarán sus datos, se hará efectivo su derecho de oposición o se tendrá por revocado el consentimiento, dentro de los quince días siguientes a la fecha en que se dé respuesta a su solicitud. Este plazo podrá ampliarse por quince días adicionales cuando existan causas que lo justifiquen.</p>
+        <p>Si usted considera que su derecho de protección de datos personales ha sido lesionado por alguna conducta de nuestro personal o de nuestras actuaciones o respuestas, o presume que en el tratamiento de sus datos personales existe alguna violación a las disposiciones previstas en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, podrás interponer la queja o denuncia correspondiente ante el INAI, para más información visite: <a href="http://www.inai.org.mx" target="_blank" class="text-brand-yellow hover:underline">www.inai.org.mx</a>.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XV. Cambios en el aviso de privacidad</h4>
+        <p>Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad, derivado de novedades legislativas, políticas internas o nuevos requerimientos para la prestación u ofrecimiento de nuestro servicio. A fin de que todos nuestros clientes conozcan dichas modificaciones estarán disponibles a través de los siguientes medios:</p>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+            <li>Nuestra página de internet: <a href="http://www.digitalpoint.mx" target="_blank" class="text-brand-yellow hover:underline">www.digitalpoint.mx</a></li>
+            <li>A través de mensajes publicados en nuestras oficinas.</li>
+        </ul>
+        <p class="font-medium p-4 bg-slate-50 border border-slate-100 rounded-lg">Una vez leído y comprendido lo indicado en el presente Aviso de Privacidad de Digital Point doy mi consentimiento para que mis datos personales sean tratados conforme a los términos y condiciones del presente instrumento.</p>
+    </template>
+
+    <template id="tplTerms">
+        <h3 class="text-xl font-bold text-brand-dark mb-4">CONDICIONES GENERALES DE ACCESO Y USO</h3>
+        <p>Las presentes reglas y políticas de acceso y uso designadas en lo sucesivo como: “TÉRMINOS Y CONDICIONES” son aplicables a la utilización de los contenidos, elementos, productos y/o servicios ofertados por la Persona Moral “Digital Point”, en lo sucesivo denominada como el “TITULAR”, por medio del sitio web alojado bajo el siguiente dominio de internet: www.digitalpoint.mx en lo sucesivo denominado: “SITIO WEB”.</p>
+        <p>Cualquier persona que en ejercicio de sus derechos y libertades acceda o haga uso de los contenidos, elementos, productos y/o servicios, se denomina en lo sucesivo como el o los “USUARIOS” mismos que estará(n) sujeto(os) a los presentes “TÉRMINOS Y CONDICIONES” incorporadas al presente contrato.</p>
+        <p>En caso de que cualquier “USUARIO” no aceptase los “TÉRMINOS Y CONDICIONES”, aquí establecidos; deberá de abstenerse de utilizar el “SITIO WEB” interactuar, consumir contenidos y/o de adquirir para sí o para terceros los productos y/o servicios que en su caso le sean ofertados.</p>
+        <p>Una vez que el o los “USUARIOS” han ingresado y navegado en el “SITIO WEB”, se compromete(n) a cumplir las siguientes REGLAS Y POLÍTICAS:</p>
+        
+        <h4 class="font-bold text-brand-text mt-6 mb-2">I. OBJETO</h4>
+        <p>Los presentes “TÉRMINOS Y CONDICIONES” regulan el acceso y la utilización del “SITIO WEB” comprendiéndose en ello, cualquier tipo de contenido, elementos, productos o servicios que se encuentran a disposición del público en general en la siguiente dirección de internet: www.digitalpoint.mx</p>
+        <p>El o los “USUARIOS” reconoce(n) que el “TITULAR” en su calidad de propietario del “SITIO WEB” le corresponde en exclusiva de forma unilateral la potestad de modificar en cualquier momento y sin previo aviso, la presentación; los contenidos; la funcionalidad; los elementos; los productos; los servicios y/o la configuración que pudieran estar contenida en el “SITIO WEB”; en ese sentido el o los “USUARIOS” reconoce(n) y acepta(n) que el “TITULAR” en cualquier momento podrá interrumpir, desactivar o cancelar cualquiera de los elementos que conforman el “SITIO WEB” e incluso el mecanismo de acceso al mismo.</p>
+        <p>El acceso de el o los “USUARIOS” al “SITIO WEB” sólo establece los derechos y obligaciones sujetas a los presentes “TÉRMINOS Y CONDICIONES” por lo que no implica otro tipo de relación jurídica entre el “TITULAR” y el o los “USUARIOS”.</p>
+        
+        <h4 class="font-bold text-brand-text mt-6 mb-2">II. LICENCIA</h4>
+        <p>El contenido de este sitio web no constituye otorgamiento de licencia de uso o derecho de la información mostrada o proporcionada.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">III. TRANSMISIÓN DE DERECHOS</h4>
+        <p>El o los “USUARIOS” reconoce(n) y acepta(n) que en su calidad de propietario el “TITULAR” podrá administrar o gestionar, transmitir o ceder sus derechos del “SITIO WEB” de forma directa o indirecta a un Tercero; lo cual no implica modificación alguna a los presentes “TÉRMINOS Y CONDICIONES”.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IV. REQUISITOS DE USO</h4>
+        <p>El acceso al “SITIO WEB” es gratuito, conlleva por parte de él o los “USUARIOS” un carácter libre, voluntario y sin coacción. Son requisitos indispensables para cumplir por el o los “USUARIOS” es asumir el coste de conexión a internet, el contar con un dispositivo de acceso sea este móvil o de escritorio, así como ser mayor de 18 años de edad al momento de su acceso, debido a que el “SITIO WEB” es de acceso y uso exclusivo para personas mayores de edad. Satisfechos ambos requisitos, “Digital Point” no será responsable de los alcances materiales y legales a que haya lugar.</p>
+        <p>El “SITIO WEB” dispone de contenidos, elementos, productos y/o servicios que solo podrán utilizarse registro previo de el o los “USUARIOS” quien(es) se compromete(n) a proporcionar información lícita y veraz en los formularios habilitados para tal efecto en el “SITIO WEB” a efecto de tener acceso y disponer de algún contenido, producto o servicio ofertado por el “TITULAR”.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">V. USUARIOS</h4>
+        <p>La calidad de “USUARIO” la adquiere cualquier usuario de internet que acceda y haga uso del “SITIO WEB” misma se tendrá por aceptada desde el momento de su acceso; por lo que ese simple hecho, sujeta y vincula a éste a los presentes “TÉRMINOS Y CONDICIONES” así como a sus ulteriores modificaciones. En virtud de ello, es igualmente responsabilidad de el o los “USUARIOS” revisar las actualizaciones a los mismos.</p>
+        <p>La interacción que llevé a cabo el o los “USUARIOS” en el “SITIO WEB” tales como publicaciones, comentarios y/o peticiones son responsabilidad única y directa de éstos, realizadas desde su espacio de forma voluntaria, libre y espontánea a modo de opinión personalísima.</p>
+        <p>El o los “USUARIOS” reconoce(n) y acepta(n) utilizar el “SITIO WEB” de conformidad a la forma y para los fines para los que fue diseñado. Queda estrictamente prohibida la utilización de cualquier tipo de software, hardware y/o cualquier herramienta que automatice, modifique, bloquee, altere, destruya o impida la interacción o descarga de los contenidos, elementos, productos y/o servicios proporcionados por el “SITIO WEB”, así como la aplicación de técnicas de ingeniería inversa en cualquiera de sus modalidades.</p>
+        <p>El o los “USUARIOS” serán responsables de utilizar los datos, información, elementos, contenidos, productos y/o servicios ofrecidos por el “SITIO WEB” de manera lícita y sin contravenir lo dispuesto en los presentes “TÉRMINOS Y CONDICIONES” absteniéndose de realizar cualquier acto u omisión que pueda tener una afectación directa o indirecta a los derechos del “TITULAR” y/o Terceros, que además lleguen a perjudicar o comprometer en modo alguno, el funcionamiento del “SITIO WEB”.</p>
+        <p>El o los “USUARIOS” son responsables de notificar de forma inmediata al “TITULAR” sobre cualquier hecho que suponga un uso indebido de la información registrada en dichos formularios, tales como el robo, secuestro o extravío a cuentas y/o contraseñas, así como accesos no autorizados, con el fin de proceder a su inmediata cancelación.</p>
+        <p>El o los ”USUARIOS” reconoce(n) y acepta(n) que “Digital Point” en cualquier momento detenta el derecho de retirar todos aquellas aportaciones y/o comentarios que vulneren la ley, así como la esfera de los derechos humanos que afectan el respeto de la dignidad de la persona, que sean discriminatorios o racistas, atenten contra los derechos comerciales y económicos o bien el prestigio profesional de terceros, o que inciten a alterar el orden público; que a su juicio, no resulten adecuados a los criterios mencionados para su publicación.</p>
+        <p>En este acto el o los “USUARIOS” reconoce(n) y manifiesta(n) al aceptar los “TÉRMINOS Y CONDICIONES” ser mayores de edad y disponer de la capacidad técnica, equipamiento y legal para sujetarse a los mismos; debido a que están debidamente informados y conscientes de que el “SITIO WEB” está dirigido exclusivamente a personas que cuentan con la mayoría de edad.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VI. CUENTA Y CONTRASEÑA</h4>
+        <p>En caso de que el usuario desee abrir una cuenta este es libre de utilizar correo y contraseña que desee teniendo en cuenta estos factores:</p>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+            <li>VI.A. Mantener la confidencialidad de la dirección de cuenta de correo electrónico y contraseña correspondientes;</li>
+            <li>VI.B. Actualizar y comprobar frecuentemente su contraseña; y</li>
+            <li>VI.C. Notificar de forma inmediata al sitio web sí tiene conocimiento del uso no autorizado de su cuenta o de cualquier vulneración de las medidas de seguridad.</li>
+        </ul>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VII. ACCESO Y NAVEGACIÓN DEL SITIO WEB</h4>
+        <p>Cualquier comunicación o material no personal proporcionada a este sitio web será considerada no confidencial y no-propietaria, por lo que “Digital Point” y/o cualquier empresa o persona asociada podrá utilizarla para los fines que considere convenientes, sin que esto genere compensación alguna.</p>
+        <p>“Digital Point” tiene derecho de editar o eliminar definitivamente cualquier información, incluyendo la que contenga material y/o expresiones inapropiadas, difamatorias o de carácter sexual implícito o explícito.</p>
+        <p>“Digital Point” no es responsable de que la información contenida en este sitio web sea completa o precisa.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VIII. PRIVACIDAD Y PROTECCIÓN DE DATOS</h4>
+        <p>Los datos personales proporcionados en este sitio web, serán tratados de acuerdo con lo que establece nuestro Aviso de Privacidad, el cual podrán consultar en esta página.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IX. USO DE COOKIES</h4>
+        <p>En este acto “Digital Point” manifiesta que el “SITIO WEB” dispone del uso de cookies. Esta tecnología es aplicada para personalizar el contenido, anuncios, ofrecer funciones de redes sociales, analizar el tráfico cibernético, almacenar preferencias, facilitar navegabilidad, amigabilidad, detectar errores, posibles necesidades, mejorar experiencia, contenidos y servicios de mayor calidad para el o los “USUARIOS”.</p>
+        <p>Asimismo, “Digital Point” declara que los datos e información recolectada en el “SITIO WEB” es compartida con nuestros aliados comerciales de redes sociales, publicidad y análisis web, quienes pueden combinarla con otra información que se haya proporcionado o que se hubiese recopilado a partir del uso del “SITIO WEB”.</p>
+        <p>El o los “USUARIOS” que no permita(n) el uso de las cookies deberá(n) deshabilitar, rechazar, restringir y/o eliminar su función desde su navegador de internet. El procedimiento para realizar cualquiera de estas acciones es variable de un navegador a otro según sus características; consecuentemente, se recomienda atender las instrucciones facilitadas por el desarrollador del navegador. Si el o los “USUARIOS” rechazase(n) de forma total o parcial el uso de las cookies, éste(os) podrá(n) continuar en uso del “SITIO WEB” en la inteligencia de que estarán deshabilitadas alguna(s) de las funciones de este.</p>
+        <p>La actualización de las políticas de uso de cookies, estarán implícitas en las propias actualizaciones que el “TITULAR” realice a los presentes “TÉRMINOS Y CONDICIONES”.</p>
+        <p>Invariablemente los datos e información recolectada en el “SITIO WEB” mediante el uso de las cookies, será de manera anónima y no será(n) individualizados el o los “USUARIOS”.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">X. PROPIEDAD INTELECTUAL E INDUSTRIAL</h4>
+        <p>Todas las imágenes, textos, marcas, avisos comerciales, nombres de dominio, diseños, etc., contenidos en este sitio web, son propiedad de “Digital Point” y está protegida por la legislación mexicana de propiedad industrial e intelectual, así como por los convenios internacionales sobre la materia.</p>
+        <p>Está estrictamente prohibido hacer uso de la información de este sitio web con fines comerciales, de publicidad o cualquiera que le represente un lucro directo o indirecto, así como la modificación total o parcial de la misma.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XI. LEGISLACIÓN Y JURISDICCIÓN APLICABLE</h4>
+        <p>“Digital Point” se reserva el ejercicio de las acciones legales que considere oportunas por la utilización indebida del “SITIO WEB” así como por el incumplimiento de los presentes “TÉRMINOS Y CONDICIONES”.</p>
+    </template>
+
+
+    <!-- Legal Modal -->
+    <div id="legalModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="legalModalBackdrop" class="absolute inset-0 bg-brand-dark/80 backdrop-blur-sm" onclick="closeLegalModal()"></div>
+        <div id="legalModalPanel" class="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[85vh] flex flex-col transform scale-95 transition-transform duration-300">
+            <div class="flex justify-between items-center p-6 border-b border-slate-100">
+                <h2 id="legalModalTitle" class="text-2xl font-display font-bold text-brand-text">Aviso Legal</h2>
+                <button onclick="closeLegalModal()" class="text-slate-400 hover:text-brand-yellow transition-colors p-2 rounded-full hover:bg-slate-50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div id="legalModalContent" class="p-6 sm:p-8 overflow-y-auto text-slate-600 space-y-4 text-sm leading-relaxed">
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <template id="tplPrivacy">
+        <h3 class="text-xl font-bold text-brand-dark mb-4">AVISO DE PRIVACIDAD</h3>
+        <p>Este instrumento describe, de conformidad con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, los datos que la Persona Moral “DIGITAL POINT SOCIEDAD ANONIMA DE CAPITAL VARIABLE”, en adelante “Digital Point”, recopila del usuario al momento de utilizar su página web o establecer relaciones empresariales y comerciales con la misma por cualquier otro medio, de la misma forma se incluyen, conforme a la ley, la manera en que dichos datos son recopilados y el uso que se les da.</p>
+        <p>También se da a conocer, mediante este aviso, la forma en que el usuario puede limitar el uso de dichos datos y el procedimiento para ejercer los derechos ARCO.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">I. Responsable de la protección de los datos personales</h4>
+        <p>Con fundamento en los artículos 15, 16 y sucesivos de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su reglamento, se hace de su conocimiento que Digital Point con domicilio ubicado en la calle Av. De los Maestros, número 1604, colonia Mezquitan Country, municipio de Guadalajara, Jalisco, C.P. 44260, es responsable de recabar, usar y proteger los datos personales de nuestros Clientes, en cumplimiento de los principios de licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad, todos ellos dispuestos como principios rectores del manejo de datos personales de acuerdo con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, destinados a generar la confianza en cada uno de nuestros clientes para proporcionar sus datos personales.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">II. Identidad y domicilio del encargado del tratamiento de los datos</h4>
+        <p>La oficina de Tratamiento de datos personales en el área designada por Digital Point, encargada de la seguridad y el manejo responsable de sus datos personales, así como atender las solicitudes que el cliente pueda presentar para ejercer los derechos aquí descritos de acuerdo con el alcance y los procedimientos ordenados por la legislación aplicable y vigente en los Estados Unidos Mexicanos.</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Contacto:</strong> Digital Point</li>
+            <li><strong>Correo electrónico:</strong> contacto@digitalpoint.mx</li>
+            <li><strong>Teléfono:</strong> 3326213125</li>
+            <li><strong>Domicilio:</strong> Av. De los Maestros, número 1604, colonia Mezquitan Country, municipio de Guadalajara, Jalisco, C.P. 44260</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">III. Finalidades primarias del tratamiento de los datos</h4>
+        <p>De acuerdo con los art. 40, 41 y 42 del reglamento de la LFPDPPP, sus datos personales serán utilizados para las siguientes finalidades necesarias para establecer la relación comercial con Digital Point:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Registro de clientes en nuestro sistema.</li>
+            <li>Para establecer las formas de pago de nuestros productos y servicios.</li>
+            <li>Para elaborar documentos CFDI vía correo electrónico.</li>
+            <li>Para implementar distintos contratos legales aplicables a las relaciones comerciales con Digital Point.</li>
+            <li>Para la aplicación y ejercicio de acciones legales en el incumplimiento de las relaciones comerciales.</li>
+            <li>Para evaluar y celebrar convenios de reconocimiento de adeudos, reestructura y financiamiento.</li>
+            <li>Para llevar a cabo la gestión y procesos de cobranza.</li>
+            <li>Envió y recepción de pagos.</li>
+            <li>Para el reconocimiento de firmas en distintas operaciones comerciales con Digital Point.</li>
+            <li>Para solicitar referencias bancarias.</li>
+            <li>Notificarle sobre nuevos productos y servicios.</li>
+            <li>Para llevar a cabo las comunicaciones necesarias respecto de los servicios que contrate.</li>
+            <li>Para atender sus quejas o sugerencias.</li>
+            <li>Para atender a sus dudas y comentarios.</li>
+            <li>Elaborar estadísticas de habito de consumo de servicios.</li>
+            <li>Evaluación de servicios prestados.</li>
+            <li>Medir el trafico en la Pagina Web y realizar funciones de análisis sobre la misma.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IV. Finalidades secundarias del tratamiento de los Datos</h4>
+        <p>De manera adicional, utilizaremos su información personal para las siguientes finalidades secundarias, que no son necesarias para una relación comercial pero que nos ayudan a mantener cercanía con los clientes, así como promover nuestros productos y servicios:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Para ofrecer ofertas y/o promociones.</li>
+            <li>Para brindar apoyo publicitario.</li>
+            <li>Entrega de obsequios e incentivos.</li>
+            <li>Establecer alianzas comerciales.</li>
+            <li>Brindar asesoría en proyectos de construcción.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">V. Forma de recabar los Datos personales</h4>
+        <p>La manera en la que Digital Point recaba los Datos Personales son:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>De manera personal, al llenar los formatos diseñados para tal efecto.</li>
+            <li>A través de la página web: www.digitalpoint.mx</li>
+            <li>A través de correo electrónico: contacto@digitalpoint.mx</li>
+            <li>De manera telefónica: 3326213125</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VI. Datos personales recabados</h4>
+        <p>Para las finalidades anteriormente señaladas, podemos recabar todos o en parte, los siguientes datos personales:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Nombre o razón social.</li>
+            <li>Datos fiscales.</li>
+            <li>Domicilio comercial y particular.</li>
+            <li>Teléfono comercial y particular.</li>
+            <li>Identificación oficial.</li>
+            <li>Firma.</li>
+            <li>Correo electrónico.</li>
+            <li>Nombre del representante legal.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VII. Datos financieros, fiscales o patrimoniales</h4>
+        <p>Para proporcionar el servicio, se recaban los siguientes datos financieros:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li>Cuenta bancaria.</li>
+            <li>CLABE Interbancaria.</li>
+            <li>Información bancaria.</li>
+        </ul>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VIII. Datos sensibles</h4>
+        <p>Le informamos que Digital Point no recaba datos sensibles de sus clientes o proveedores.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IX. Cookies y/o web beacons</h4>
+        <p>Le informamos que en nuestros sitios de internet podemos hacer uso de cookies, web beacons y otras tecnologías de rastreo que nos permiten cumplir con las finalidades informadas en el presente Aviso de Privacidad.</p>
+        <p>Se entiende por cookies y web beacons, los archivos de datos que se almacena en el disco duro del equipo de cómputo o del dispositivo de comunicaciones electrónicas de un usuario al navegar en un sitio de internet específico, el cual permite intercambiar información de estado entre dicho sitio y el navegador del usuario. La información de estado puede revelar medios de identificación de sesión, autenticación o preferencias del usuario, así como cualquier dato almacenado por el navegador respecto al sitio de internet.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">X. Consentimiento</h4>
+        <p>De acuerdo con lo indicado en el artículo 8 de la Ley, se entenderá que el titular consiente tácitamente el tratamiento de sus datos, cuando habiéndose puesto a su disposición el presente Aviso de Privacidad, no manifiesta su oposición al respecto.</p>
+        <p>Así mismo, declara y acepta que cuenta con el consentimiento de aquellos terceros de los cuales usted proporciona sus datos, en el entendido de que dichos datos se regirán por el presente Aviso de Privacidad.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XI. Transferencia</h4>
+        <p>Únicamente transferiremos sus datos personales a terceros, nacionales o extranjeros, que estén relacionados jurídica o comercialmente con nosotros para cumplir con las finalidades descritas en el Aviso de Privacidad y tomando en cuenta las excepciones previstas en el artículo 37 de la Ley, así como a realizar esta transferencia en los términos fijados en su reglamento.</p>
+        <p>Podremos transferir sus datos personales conforme a lo siguiente:</p>
+        <p><strong>Destinatario de los datos personales:</strong> Servicio de Administración Tributaria, Socios comerciales/filiales, Notarias Publicas, Abogados externos/despachos de cobranza.</p>
+        <p><strong>Finalidades de la transferencia:</strong> Para cumplir con la legislación fiscal aplicable, complementar o ampliar la atención, los servicios y los fines comerciales, para las investigaciones en Buró de Crédito, para la protocolización de los distintos instrumentos notariales derivados de las relaciones comerciales, y para las gestiones legales y de cobranza necesarias.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XII. Resguardo en el manejo de los datos personales</h4>
+        <p>La confidencialidad de los Datos Personales está garantizada y los mismos están protegidos por medidas de seguridad administrativas, técnicas y físicas, para evitar daño... (La copia detallada y completa resguarda la información adecuadamente en la BD).</p>
+        <!-- I will truncate here for brevity but keep it full in final prompt or just paste the key parts to look professional. Since user asked to upload it, we'll put the full text. Wait, my python script string is getting huge. -->
+        <p>La confidencialidad de los Datos Personales está garantizada y los mismos están protegidos por medidas de seguridad administrativas, técnicas y físicas, para evitar daño, pérdida, alteración, destrucción, uso, acceso o divulgación indebida; por ejemplo, los Datos Personales se encuentran en una base de datos interna, cuya administración es a través de claves de acceso que cambian en forma periódica y permitido el ingreso sólo a personas autorizadas; además, contamos con convenios de confidencialidad con el personal que maneja sus datos personales; entre otras medidas.</p>
+        <p>La obligación de confidencialidad de las personas que participan en el tratamiento de sus datos personales subsiste aun después de terminada la relación con Digital Point, sin embargo, este, no se hará responsable por el mal uso de los datos personales que pudieran realizar excolaboradores, aprovechándose de su función o puesto, a manera de beneficio personal o con la finalidad de dañar a Digital Point.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XIII. Limitación o revocación en el uso y divulgación de sus datos</h4>
+        <p>En el caso de que por cualquier situación usted requiera limitar el alcance, en todo o en parte, del uso y/o divulgación de sus datos personales, así como revocar el consentimiento para el tratamiento de estos, ponemos a su disposición la SOLICITUD PARA LIMITAR EL USO O DIVULGACIÓN, que podrá solicitar en la oficina respectiva de manera presencial o por medio de correo electrónico.</p>
+        <p>Esta solicitud seguirá el mismo procedimiento empleado para la solicitud de derechos ARCO, el cual se detalla en el siguiente apartado.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XIV. Procedimiento para ejercer derechos ARCO</h4>
+        <p>Conforme a la Ley el titular, por sí o mediante representante legal debidamente acreditado, podrá ejercer sus derechos de acceso, rectificación, cancelación y oposición directamente en Digital Point.</p>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+            <li><strong>I) Acceso.</strong> Usted podrá solicitar en todo momento conocer qué datos suyos han sido recabados y conserva el responsable.</li>
+            <li><strong>II) Rectificación.</strong> En caso de que alguno de sus datos sea inexacto o incompleto podrá solicitar su corrección, debiendo adjuntar la documentación que acredite dicha modificación.</li>
+            <li><strong>III) Cancelación.</strong> Podrá solicitarse en todo momento la cancelación de los datos; en caso de ser procedente la solicitud, los datos entrarán al período de bloqueo en el cual no podrán ser tratados de ninguna manera para su posterior supresión.</li>
+            <li><strong>IV) Oposición.</strong> En todo momento el titular podrá negarse por causa justificada al tratamiento de sus datos personales.</li>
+        </ul>
+        <p><strong>Procedimiento:</strong> Pida la Solicitud de Derechos Arco, en ATENCIÓN DE DATOS PERSONALES o vía correo electrónico (indicado en el apartado de contacto) para su posterior llenado, identificando con precisión los datos respecto de los cuales solicite el acceso, rectificación, cancelación u oposición, anexando alguno de los documentos de identificación que se señalan en la solicitud con el fin de acreditar su identidad o la personalidad con la que realiza la solicitud.</p>
+        <p>Una vez lleno este formulario deberá entregarse nuevamente al departamento encargado para tal efecto, agregando una copia de la solicitud completada donde se plasmará la fecha de recepción correspondiente, misma que servirá como acuse de recibo; podrán adjuntarse aquellos documentos que sean relevantes para la solicitud en cuestión.</p>
+        <p>Su solicitud será contestada de manera presencial o vía correo electrónico en un término de veinte días hábiles contados a partir de la fecha de recepción señalada en el acuse de recibo. Este plazo podrá ampliarse por veinte días adicionales cuando existan causas que lo justifiquen, esta situación se notificará al titular de acuerdo con lo establecido por el artículo 97 del Reglamento de la Ley.</p>
+        <p>En caso de que su solicitud sea procedente de conformidad con la Ley y demás normatividad vigente, se otorgará el acceso, se rectificarán o cancelarán sus datos, se hará efectivo su derecho de oposición o se tendrá por revocado el consentimiento, dentro de los quince días siguientes a la fecha en que se dé respuesta a su solicitud. Este plazo podrá ampliarse por quince días adicionales cuando existan causas que lo justifiquen.</p>
+        <p>Si usted considera que su derecho de protección de datos personales ha sido lesionado por alguna conducta de nuestro personal o de nuestras actuaciones o respuestas, o presume que en el tratamiento de sus datos personales existe alguna violación a las disposiciones previstas en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, podrás interponer la queja o denuncia correspondiente ante el INAI, para más información visite: <a href="http://www.inai.org.mx" target="_blank" class="text-brand-yellow hover:underline">www.inai.org.mx</a>.</p>
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XV. Cambios en el aviso de privacidad</h4>
+        <p>Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad, derivado de novedades legislativas, políticas internas o nuevos requerimientos para la prestación u ofrecimiento de nuestro servicio. A fin de que todos nuestros clientes conozcan dichas modificaciones estarán disponibles a través de los siguientes medios:</p>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+            <li>Nuestra página de internet: <a href="http://www.digitalpoint.mx" target="_blank" class="text-brand-yellow hover:underline">www.digitalpoint.mx</a></li>
+            <li>A través de mensajes publicados en nuestras oficinas.</li>
+        </ul>
+        <p class="font-medium p-4 bg-slate-50 border border-slate-100 rounded-lg">Una vez leído y comprendido lo indicado en el presente Aviso de Privacidad de Digital Point doy mi consentimiento para que mis datos personales sean tratados conforme a los términos y condiciones del presente instrumento.</p>
+    </template>
+
+    <template id="tplTerms">
+        <h3 class="text-xl font-bold text-brand-dark mb-4">CONDICIONES GENERALES DE ACCESO Y USO</h3>
+        <p>Las presentes reglas y políticas de acceso y uso designadas en lo sucesivo como: “TÉRMINOS Y CONDICIONES” son aplicables a la utilización de los contenidos, elementos, productos y/o servicios ofertados por la Persona Moral “Digital Point”, en lo sucesivo denominada como el “TITULAR”, por medio del sitio web alojado bajo el siguiente dominio de internet: www.digitalpoint.mx en lo sucesivo denominado: “SITIO WEB”.</p>
+        <p>Cualquier persona que en ejercicio de sus derechos y libertades acceda o haga uso de los contenidos, elementos, productos y/o servicios, se denomina en lo sucesivo como el o los “USUARIOS” mismos que estará(n) sujeto(os) a los presentes “TÉRMINOS Y CONDICIONES” incorporadas al presente contrato.</p>
+        <p>En caso de que cualquier “USUARIO” no aceptase los “TÉRMINOS Y CONDICIONES”, aquí establecidos; deberá de abstenerse de utilizar el “SITIO WEB” interactuar, consumir contenidos y/o de adquirir para sí o para terceros los productos y/o servicios que en su caso le sean ofertados.</p>
+        <p>Una vez que el o los “USUARIOS” han ingresado y navegado en el “SITIO WEB”, se compromete(n) a cumplir las siguientes REGLAS Y POLÍTICAS:</p>
+        
+        <h4 class="font-bold text-brand-text mt-6 mb-2">I. OBJETO</h4>
+        <p>Los presentes “TÉRMINOS Y CONDICIONES” regulan el acceso y la utilización del “SITIO WEB” comprendiéndose en ello, cualquier tipo de contenido, elementos, productos o servicios que se encuentran a disposición del público en general en la siguiente dirección de internet: www.digitalpoint.mx</p>
+        <p>El o los “USUARIOS” reconoce(n) que el “TITULAR” en su calidad de propietario del “SITIO WEB” le corresponde en exclusiva de forma unilateral la potestad de modificar en cualquier momento y sin previo aviso, la presentación; los contenidos; la funcionalidad; los elementos; los productos; los servicios y/o la configuración que pudieran estar contenida en el “SITIO WEB”; en ese sentido el o los “USUARIOS” reconoce(n) y acepta(n) que el “TITULAR” en cualquier momento podrá interrumpir, desactivar o cancelar cualquiera de los elementos que conforman el “SITIO WEB” e incluso el mecanismo de acceso al mismo.</p>
+        <p>El acceso de el o los “USUARIOS” al “SITIO WEB” sólo establece los derechos y obligaciones sujetas a los presentes “TÉRMINOS Y CONDICIONES” por lo que no implica otro tipo de relación jurídica entre el “TITULAR” y el o los “USUARIOS”.</p>
+        
+        <h4 class="font-bold text-brand-text mt-6 mb-2">II. LICENCIA</h4>
+        <p>El contenido de este sitio web no constituye otorgamiento de licencia de uso o derecho de la información mostrada o proporcionada.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">III. TRANSMISIÓN DE DERECHOS</h4>
+        <p>El o los “USUARIOS” reconoce(n) y acepta(n) que en su calidad de propietario el “TITULAR” podrá administrar o gestionar, transmitir o ceder sus derechos del “SITIO WEB” de forma directa o indirecta a un Tercero; lo cual no implica modificación alguna a los presentes “TÉRMINOS Y CONDICIONES”.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IV. REQUISITOS DE USO</h4>
+        <p>El acceso al “SITIO WEB” es gratuito, conlleva por parte de él o los “USUARIOS” un carácter libre, voluntario y sin coacción. Son requisitos indispensables para cumplir por el o los “USUARIOS” es asumir el coste de conexión a internet, el contar con un dispositivo de acceso sea este móvil o de escritorio, así como ser mayor de 18 años de edad al momento de su acceso, debido a que el “SITIO WEB” es de acceso y uso exclusivo para personas mayores de edad. Satisfechos ambos requisitos, “Digital Point” no será responsable de los alcances materiales y legales a que haya lugar.</p>
+        <p>El “SITIO WEB” dispone de contenidos, elementos, productos y/o servicios que solo podrán utilizarse registro previo de el o los “USUARIOS” quien(es) se compromete(n) a proporcionar información lícita y veraz en los formularios habilitados para tal efecto en el “SITIO WEB” a efecto de tener acceso y disponer de algún contenido, producto o servicio ofertado por el “TITULAR”.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">V. USUARIOS</h4>
+        <p>La calidad de “USUARIO” la adquiere cualquier usuario de internet que acceda y haga uso del “SITIO WEB” misma se tendrá por aceptada desde el momento de su acceso; por lo que ese simple hecho, sujeta y vincula a éste a los presentes “TÉRMINOS Y CONDICIONES” así como a sus ulteriores modificaciones. En virtud de ello, es igualmente responsabilidad de el o los “USUARIOS” revisar las actualizaciones a los mismos.</p>
+        <p>La interacción que llevé a cabo el o los “USUARIOS” en el “SITIO WEB” tales como publicaciones, comentarios y/o peticiones son responsabilidad única y directa de éstos, realizadas desde su espacio de forma voluntaria, libre y espontánea a modo de opinión personalísima.</p>
+        <p>El o los “USUARIOS” reconoce(n) y acepta(n) utilizar el “SITIO WEB” de conformidad a la forma y para los fines para los que fue diseñado. Queda estrictamente prohibida la utilización de cualquier tipo de software, hardware y/o cualquier herramienta que automatice, modifique, bloquee, altere, destruya o impida la interacción o descarga de los contenidos, elementos, productos y/o servicios proporcionados por el “SITIO WEB”, así como la aplicación de técnicas de ingeniería inversa en cualquiera de sus modalidades.</p>
+        <p>El o los “USUARIOS” serán responsables de utilizar los datos, información, elementos, contenidos, productos y/o servicios ofrecidos por el “SITIO WEB” de manera lícita y sin contravenir lo dispuesto en los presentes “TÉRMINOS Y CONDICIONES” absteniéndose de realizar cualquier acto u omisión que pueda tener una afectación directa o indirecta a los derechos del “TITULAR” y/o Terceros, que además lleguen a perjudicar o comprometer en modo alguno, el funcionamiento del “SITIO WEB”.</p>
+        <p>El o los “USUARIOS” son responsables de notificar de forma inmediata al “TITULAR” sobre cualquier hecho que suponga un uso indebido de la información registrada en dichos formularios, tales como el robo, secuestro o extravío a cuentas y/o contraseñas, así como accesos no autorizados, con el fin de proceder a su inmediata cancelación.</p>
+        <p>El o los ”USUARIOS” reconoce(n) y acepta(n) que “Digital Point” en cualquier momento detenta el derecho de retirar todos aquellas aportaciones y/o comentarios que vulneren la ley, así como la esfera de los derechos humanos que afectan el respeto de la dignidad de la persona, que sean discriminatorios o racistas, atenten contra los derechos comerciales y económicos o bien el prestigio profesional de terceros, o que inciten a alterar el orden público; que a su juicio, no resulten adecuados a los criterios mencionados para su publicación.</p>
+        <p>En este acto el o los “USUARIOS” reconoce(n) y manifiesta(n) al aceptar los “TÉRMINOS Y CONDICIONES” ser mayores de edad y disponer de la capacidad técnica, equipamiento y legal para sujetarse a los mismos; debido a que están debidamente informados y conscientes de que el “SITIO WEB” está dirigido exclusivamente a personas que cuentan con la mayoría de edad.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VI. CUENTA Y CONTRASEÑA</h4>
+        <p>En caso de que el usuario desee abrir una cuenta este es libre de utilizar correo y contraseña que desee teniendo en cuenta estos factores:</p>
+        <ul class="list-disc pl-5 space-y-1 mb-4">
+            <li>VI.A. Mantener la confidencialidad de la dirección de cuenta de correo electrónico y contraseña correspondientes;</li>
+            <li>VI.B. Actualizar y comprobar frecuentemente su contraseña; y</li>
+            <li>VI.C. Notificar de forma inmediata al sitio web sí tiene conocimiento del uso no autorizado de su cuenta o de cualquier vulneración de las medidas de seguridad.</li>
+        </ul>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VII. ACCESO Y NAVEGACIÓN DEL SITIO WEB</h4>
+        <p>Cualquier comunicación o material no personal proporcionada a este sitio web será considerada no confidencial y no-propietaria, por lo que “Digital Point” y/o cualquier empresa o persona asociada podrá utilizarla para los fines que considere convenientes, sin que esto genere compensación alguna.</p>
+        <p>“Digital Point” tiene derecho de editar o eliminar definitivamente cualquier información, incluyendo la que contenga material y/o expresiones inapropiadas, difamatorias o de carácter sexual implícito o explícito.</p>
+        <p>“Digital Point” no es responsable de que la información contenida en este sitio web sea completa o precisa.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">VIII. PRIVACIDAD Y PROTECCIÓN DE DATOS</h4>
+        <p>Los datos personales proporcionados en este sitio web, serán tratados de acuerdo con lo que establece nuestro Aviso de Privacidad, el cual podrán consultar en esta página.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">IX. USO DE COOKIES</h4>
+        <p>En este acto “Digital Point” manifiesta que el “SITIO WEB” dispone del uso de cookies. Esta tecnología es aplicada para personalizar el contenido, anuncios, ofrecer funciones de redes sociales, analizar el tráfico cibernético, almacenar preferencias, facilitar navegabilidad, amigabilidad, detectar errores, posibles necesidades, mejorar experiencia, contenidos y servicios de mayor calidad para el o los “USUARIOS”.</p>
+        <p>Asimismo, “Digital Point” declara que los datos e información recolectada en el “SITIO WEB” es compartida con nuestros aliados comerciales de redes sociales, publicidad y análisis web, quienes pueden combinarla con otra información que se haya proporcionado o que se hubiese recopilado a partir del uso del “SITIO WEB”.</p>
+        <p>El o los “USUARIOS” que no permita(n) el uso de las cookies deberá(n) deshabilitar, rechazar, restringir y/o eliminar su función desde su navegador de internet. El procedimiento para realizar cualquiera de estas acciones es variable de un navegador a otro según sus características; consecuentemente, se recomienda atender las instrucciones facilitadas por el desarrollador del navegador. Si el o los “USUARIOS” rechazase(n) de forma total o parcial el uso de las cookies, éste(os) podrá(n) continuar en uso del “SITIO WEB” en la inteligencia de que estarán deshabilitadas alguna(s) de las funciones de este.</p>
+        <p>La actualización de las políticas de uso de cookies, estarán implícitas en las propias actualizaciones que el “TITULAR” realice a los presentes “TÉRMINOS Y CONDICIONES”.</p>
+        <p>Invariablemente los datos e información recolectada en el “SITIO WEB” mediante el uso de las cookies, será de manera anónima y no será(n) individualizados el o los “USUARIOS”.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">X. PROPIEDAD INTELECTUAL E INDUSTRIAL</h4>
+        <p>Todas las imágenes, textos, marcas, avisos comerciales, nombres de dominio, diseños, etc., contenidos en este sitio web, son propiedad de “Digital Point” y está protegida por la legislación mexicana de propiedad industrial e intelectual, así como por los convenios internacionales sobre la materia.</p>
+        <p>Está estrictamente prohibido hacer uso de la información de este sitio web con fines comerciales, de publicidad o cualquiera que le represente un lucro directo o indirecto, así como la modificación total o parcial de la misma.</p>
+
+        <h4 class="font-bold text-brand-text mt-6 mb-2">XI. LEGISLACIÓN Y JURISDICCIÓN APLICABLE</h4>
+        <p>“Digital Point” se reserva el ejercicio de las acciones legales que considere oportunas por la utilización indebida del “SITIO WEB” así como por el incumplimiento de los presentes “TÉRMINOS Y CONDICIONES”.</p>
+    </template>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="fixed bottom-5 right-5 z-[200] transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center p-4 mb-4 text-gray-500 bg-white rounded-lg shadow-xl border-l-4 border-green-500" role="alert">
+        <div id="toastIconContainer" class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
+            <svg id="toastIconSuccess" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <svg id="toastIconError" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </div>
+        <div id="toastMessage" class="ml-3 text-sm font-normal mr-4 text-brand-dark"></div>
+        <button type="button" onclick="closeToast()" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+    </div>
+
+</body>
+</html>
