@@ -53,16 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 body: formData
             })
-            .then(response => {
-                if (response.ok) {
+            .then(async response => {
+                let data;
+                try {
+                    data = await response.json();
+                } catch(e) {
+                    data = null;
+                }
+
+                if (response.ok && (!data || data.status === 'success')) {
                     showToast('¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto contigo pronto.', true);
-                    contactForm.reset(); // Limpiar el formulario
+                    contactForm.reset();
                 } else {
-                    throw new Error('Server error');
+                    const msg = (data && data.message) ? data.message : 'El servidor no pudo procesar el envío del correo.';
+                    showToast(msg, false);
                 }
             })
             .catch(error => {
-                showToast('Hubo un error de conexión, o estás probando el formulario de forma local sin PHP configurado.', false);
+                showToast('No se pudo conectar con enviar.php. Si estás probando de forma local, abre el sitio mediante un servidor con PHP (o pruébalo directamente en tu hosting).', false);
             })
             .finally(() => {
                 // Restaurar botón
