@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(this);
             
-            const nombre = formData.get('Nombre').trim();
-            const contacto = formData.get('Contacto').trim();
-            const mensaje = formData.get('Mensaje').trim();
+            const nombre = (formData.get('Nombre') || '').toString().trim();
+            const contacto = (formData.get('Contacto') || '').toString().trim();
+            const mensaje = (formData.get('Mensaje') || '').toString().trim();
 
             if (!nombre || !contacto || !mensaje) {
                 showToast('Por favor, completa todos los campos para poder enviar tu mensaje.', false);
